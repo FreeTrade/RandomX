@@ -29,16 +29,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 //Cache size in KiB. Must be a power of 2.
-#define RANDOMX_ARGON_MEMORY       262144
+#define RANDOMX_ARGON_MEMORY       131072
 
 //Number of Argon2d iterations for Cache initialization.
-#define RANDOMX_ARGON_ITERATIONS   3
+#define RANDOMX_ARGON_ITERATIONS   4
 
 //Number of parallel lanes for Cache initialization.
 #define RANDOMX_ARGON_LANES        1
 
 //Argon2d salt
-#define RANDOMX_ARGON_SALT         "RandomX\x03"
+#define RANDOMX_ARGON_SALT         "RandomXSalt\x03"
 
 //Number of random Cache accesses per Dataset item. Minimum is 2.
 #define RANDOMX_CACHE_ACCESSES     8
