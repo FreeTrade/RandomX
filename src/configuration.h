@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define RANDOMX_ARGON_MEMORY       131072
 
 //Number of Argon2d iterations for Cache initialization.
-#define RANDOMX_ARGON_ITERATIONS   4
+#define RANDOMX_ARGON_ITERATIONS   6
 
 //Number of parallel lanes for Cache initialization.
 #define RANDOMX_ARGON_LANES        1
