@@ -29,25 +29,25 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 //Cache size in KiB. Must be a power of 2.
-#define RANDOMX_ARGON_MEMORY       262144
+#define RANDOMX_ARGON_MEMORY       131072
 
 //Number of Argon2d iterations for Cache initialization.
-#define RANDOMX_ARGON_ITERATIONS   3
+#define RANDOMX_ARGON_ITERATIONS   4
 
 //Number of parallel lanes for Cache initialization.
 #define RANDOMX_ARGON_LANES        1
 
 //Argon2d salt
-#define RANDOMX_ARGON_SALT         "RandomX\x03"
+#define RANDOMX_ARGON_SALT         "RandomXSalt\x03"
 
 //Number of random Cache accesses per Dataset item. Minimum is 2.
-#define RANDOMX_CACHE_ACCESSES     8
+#define RANDOMX_CACHE_ACCESSES     16
 
 //Target latency for SuperscalarHash (in cycles of the reference CPU).
-#define RANDOMX_SUPERSCALAR_LATENCY   170
+#define RANDOMX_SUPERSCALAR_LATENCY   160
 
 //Dataset base size in bytes. Must be a power of 2.
-#define RANDOMX_DATASET_BASE_SIZE  2147483648
+#define RANDOMX_DATASET_BASE_SIZE  536870912
 
 //Dataset extra size. Must be divisible by 64.
 #define RANDOMX_DATASET_EXTRA_SIZE 33554368
@@ -56,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define RANDOMX_PROGRAM_SIZE       256
 
 //Number of iterations during VM execution.
-#define RANDOMX_PROGRAM_ITERATIONS 2048
+#define RANDOMX_PROGRAM_ITERATIONS 1024
 
 //Number of chained VM executions per hash.
 #define RANDOMX_PROGRAM_COUNT      8
@@ -88,10 +88,10 @@ Total sum of frequencies must be 256
 #define RANDOMX_FREQ_ISUB_M         7
 #define RANDOMX_FREQ_IMUL_R        16
 #define RANDOMX_FREQ_IMUL_M         4
-#define RANDOMX_FREQ_IMULH_R        4
-#define RANDOMX_FREQ_IMULH_M        1
-#define RANDOMX_FREQ_ISMULH_R       4
-#define RANDOMX_FREQ_ISMULH_M       1
+#define RANDOMX_FREQ_IMULH_R        0
+#define RANDOMX_FREQ_IMULH_M        0
+#define RANDOMX_FREQ_ISMULH_R       0
+#define RANDOMX_FREQ_ISMULH_M       0
 #define RANDOMX_FREQ_IMUL_RCP       8
 #define RANDOMX_FREQ_INEG_R         2
 #define RANDOMX_FREQ_IXOR_R        15
@@ -112,8 +112,8 @@ Total sum of frequencies must be 256
 #define RANDOMX_FREQ_FSQRT_R        6
 
 //Control instructions
-#define RANDOMX_FREQ_CBRANCH       25
-#define RANDOMX_FREQ_CFROUND        1
+#define RANDOMX_FREQ_CBRANCH       36
+#define RANDOMX_FREQ_CFROUND        0
 
 //Store instruction
 #define RANDOMX_FREQ_ISTORE        16
