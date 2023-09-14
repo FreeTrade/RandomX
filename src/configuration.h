@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define RANDOMX_CACHE_ACCESSES     16
 
 //Target latency for SuperscalarHash (in cycles of the reference CPU).
-#define RANDOMX_SUPERSCALAR_LATENCY   160
+#define RANDOMX_SUPERSCALAR_LATENCY   170
 
 //Dataset base size in bytes. Must be a power of 2.
 #define RANDOMX_DATASET_BASE_SIZE  536870912
@@ -56,13 +56,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define RANDOMX_PROGRAM_SIZE       256
 
 //Number of iterations during VM execution.
-#define RANDOMX_PROGRAM_ITERATIONS 1024
+#define RANDOMX_PROGRAM_ITERATIONS 2048
 
 //Number of chained VM executions per hash.
-#define RANDOMX_PROGRAM_COUNT      16
+#define RANDOMX_PROGRAM_COUNT      8
 
 //Scratchpad L3 size in bytes. Must be a power of 2.
-#define RANDOMX_SCRATCHPAD_L3      1048576
+#define RANDOMX_SCRATCHPAD_L3      2097152
 
 //Scratchpad L2 size in bytes. Must be a power of two and less than or equal to RANDOMX_SCRATCHPAD_L3.
 #define RANDOMX_SCRATCHPAD_L2      262144
@@ -107,12 +107,12 @@ Total sum of frequencies must be 256
 #define RANDOMX_FREQ_FSUB_R        16
 #define RANDOMX_FREQ_FSUB_M         5
 #define RANDOMX_FREQ_FSCAL_R        6
-#define RANDOMX_FREQ_FMUL_R        43
+#define RANDOMX_FREQ_FMUL_R        32
 #define RANDOMX_FREQ_FDIV_M         4
 #define RANDOMX_FREQ_FSQRT_R        6
 
 //Control instructions
-#define RANDOMX_FREQ_CBRANCH       25
+#define RANDOMX_FREQ_CBRANCH       36
 #define RANDOMX_FREQ_CFROUND        0
 
 //Store instruction
