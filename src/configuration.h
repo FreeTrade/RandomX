@@ -113,10 +113,10 @@ Total sum of frequencies must be 256
 
 //Control instructions
 #define RANDOMX_FREQ_CBRANCH       25
-#define RANDOMX_FREQ_CFROUND        1
+#define RANDOMX_FREQ_CFROUND        0
 
 //Store instruction
-#define RANDOMX_FREQ_ISTORE        16
+#define RANDOMX_FREQ_ISTORE        17
 
 //No-op instruction
 #define RANDOMX_FREQ_NOP            0
