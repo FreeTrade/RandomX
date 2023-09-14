@@ -62,7 +62,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define RANDOMX_PROGRAM_COUNT      8
 
 //Scratchpad L3 size in bytes. Must be a power of 2.
-#define RANDOMX_SCRATCHPAD_L3      2097152
+#define RANDOMX_SCRATCHPAD_L3      1048576
 
 //Scratchpad L2 size in bytes. Must be a power of two and less than or equal to RANDOMX_SCRATCHPAD_L3.
 #define RANDOMX_SCRATCHPAD_L2      262144
