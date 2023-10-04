@@ -203,10 +203,9 @@ namespace randomx {
 		int resultOp_ = 0;
 		int dstOp_ = 0;
 		int srcOp_;
-	//public:
+
 		SuperscalarInstructionInfo(const char* name)
-			: name_(name), type_(SuperscalarInstructionType::INVALID), latency_(0) {
-			}
+			: name_(name), type_(SuperscalarInstructionType::INVALID), latency_(0) {}
 		SuperscalarInstructionInfo(const char* name, SuperscalarInstructionType type, const MacroOp& op, int srcOp)
 			: name_(name), type_(type), latency_(op.getLatency()), srcOp_(srcOp) {
 			ops_.push_back(MacroOp(op));
@@ -573,27 +572,8 @@ namespace randomx {
 			src_ = dst_ = -1;
 			canReuse_ = groupParIsSource_ = false;
 		}
-		SuperscalarInstruction(const SuperscalarInstructionInfo* info) : info_(info) {
-		}
-		
-	public:
-		SuperscalarInstruction(const SuperscalarInstruction& obj1) : info_(obj1.info_)
-		{
-			
-			if(!obj1.info_)
-			{
-				info_ = (&SuperscalarInstructionInfo::NOP);
-			}
-			//else
-			src_ = obj1.src_;
-			dst_ = obj1.dst_;
-			mod_ = obj1.mod_;
-			imm32_ = obj1.imm32_;
-			opGroup_ = obj1.opGroup_;
-			opGroupPar_ = obj1.opGroupPar_;
-			canReuse_ = obj1.canReuse_;
-			groupParIsSource_ = obj1.groupParIsSource_;
 
+		SuperscalarInstruction(const SuperscalarInstructionInfo* info) : info_(info) {
 		}
 	};
 
