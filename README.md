@@ -41,8 +41,8 @@ Build dependencies: `cmake` (minimum 2.8.7) and `gcc` (minimum version 4.8, but 
 
 To build optimized binaries for your machine, run:
 ```
-git clone https://github.com/tevador/RandomX.git
-cd RandomX
+git clone https://github.com/repnettools/RandomXRN.git
+cd RandomXRN
 mkdir build && cd build
 cmake -DARCH=native ..
 make
@@ -53,6 +53,29 @@ To build portable binaries, omit the `ARCH` option when executing cmake.
 ### Windows
 
 On Windows, it is possible to build using MinGW (same procedure as on Linux) or using Visual Studio (solution file is provided).
+
+Following installation of MinGW/GCC etc - Success using -
+```
+git clone https://github.com/repnettools/RandomXRN.git
+cd RandomXRN
+mkdir build && cd build
+cmake -G "MinGW Makefiles" -B build ..
+cd build
+mingw32-make
+```
+
+Possibly can also cross compile from linux using
+```
+sudo apt update
+sudo apt install mingw-w64
+git clone https://github.com/repnettools/RandomXRN.git
+cd RandomXRN
+mkdir build && cd build
+cmake -DCMAKE_SYSTEM_NAME=Windows -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++ ..
+make
+```
+
+
 
 ### Precompiled binaries
 
